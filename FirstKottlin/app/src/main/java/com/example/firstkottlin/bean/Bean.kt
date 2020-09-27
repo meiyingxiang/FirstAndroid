@@ -1,4 +1,4 @@
-package com.example.firstkottlin
+package com.example.firstkottlin.bean
 
 class Bean {
     var userName :String=""

@@ -3,12 +3,14 @@ package com.example.firstkottlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.firstkottlin.bean.AnimalDefault
+import com.example.firstkottlin.bean.Bean
+import com.example.firstkottlin.bean.Cock
+import com.example.firstkottlin.bean.Hen
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
-import org.jetbrains.anko.toast
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -123,14 +125,22 @@ class MainActivity : AppCompatActivity() {
  //            }
          }*/
 
-        var str_null: String? = ""
-        Log.e("Frank", "str_null=${str_null?.length ?: -1}")
-        getDoubleData()
+//        var str_null: String? = ""
+//        Log.e("Frank", "str_null=${str_null?.length ?: -1}")
+//        getDoubleData()
+//
+//        Log.e("Frank", "当前时间为:${Date().getNowDateTime()}")
+//
+//        var bean: Bean =
+//            Bean()
+//        var animalDefault: AnimalDefault =
+//            AnimalDefault(this, "阿强", 1)
 
-        Log.e("Frank","当前时间为:${Date().getNowDateTime()}")
+        var cock: Cock = Cock("公鸡")
+        Log.e("Frank", cock.callOut(4))
 
-        var bean : Bean = Bean()
-
+        var hen: Hen = Hen("hen")
+        Log.e("Frank", hen.callOut(2))
     }
 
     fun getDoubleData() {
